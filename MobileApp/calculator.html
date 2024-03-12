@@ -1,0 +1,64 @@
+<!--Declares the document type and version of HTML -->
+<!DOCTYPE html>
+<!-- Specifies the language of the document -->
+<html lang="en">
+<!-- Contains meta-information about the document such as title, character encoding, and links to external resources like CSS. -->
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+  <!-- Links to an external CSS file named main.css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Declares the character encoding of the document -->
+  <meta charset="UTF-8">
+  <!-- Sets the viewport properties for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Sets the title of the document -->
+  <title>Calculator</title>
+</head>
+<!-- Contains the visible content of the document -->
+<body>
+<nav class="navbar fixed-bottom navbar-dark bg-dark">
+  <a href="home.html" class="navbar-brand"><i class="fas fa-home"></i></a>
+
+  <a href="tipsCalculator.html" class="navbar-brand"><i class="fas fa-donate"></i></a>
+
+  <a href="dice.html" class="navbar-brand"><i class="fas fa-dice"></i></a>
+
+  <a href="calculator.html" class="navbar-brand"><i class="fas fa-calculator"></i></a>
+
+</nav>
+<!--  Defines a container for the calculator. -->
+<div class="calculator">
+  <!-- Displays the result of calculations. It's readonly to prevent direct user input -->
+  <label for="result"></label><input type="text" id="result" readonly>
+  <!-- Container for calculator buttons -->
+  <div class="buttons">
+    <button onclick="clearResult()">C</button>
+    <button onclick="appendValue('7')">7</button>
+    <button onclick="appendValue('8')">8</button>
+    <button onclick="appendValue('9')">9</button>
+    <button onclick="appendValue('/')">/</button>
+    <button onclick="appendValue('4')">4</button>
+    <button onclick="appendValue('5')">5</button>
+    <button onclick="appendValue('6')">6</button>
+    <button onclick="appendValue('*')">*</button>
+    <button onclick="appendValue('1')">1</button>
+    <button onclick="appendValue('2')">2</button>
+    <button onclick="appendValue('3')">3</button>
+    <button onclick="appendValue('-')">-</button>
+    <button onclick="appendValue('0')">0</button>
+    <button onclick="appendValue('.')">.</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="appendValue('+')">+</button>
+  </div>
+  <!-- Container for displaying calculation history -->
+  <div id="previous-results"><p class="history">History</p></div>
+  <!-- Button to clear calculation history. -->
+  <button onclick="clearResults()">Clear History</button>
+</div>
+<!-- Links to an external JavaScript file named script.js -->
+<script src="js/script.js"></script>
+</body>
+</html>

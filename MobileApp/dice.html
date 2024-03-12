@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dice</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<img id="img" src="" alt="">
+<p id="dice">Get a random number</p>
+<button onclick="random()">Roll The Dice</button>
+<button onclick="doNotRoll()">Don’t Roll The Dice</button>
+<nav class="navbar fixed-bottom navbar-dark bg-dark">
+    <a href="home.html" class="navbar-brand"><i class="fas fa-home"></i></a>
+
+    <a href="tipsCalculator.html" class="navbar-brand"><i class="fas fa-donate"></i></a>
+
+    <a href="dice.html" class="navbar-brand"><i class="fas fa-dice"></i></a>
+
+    <a href="calculator.html" class="navbar-brand"><i class="fas fa-calculator"></i></a>
+
+</nav>
+<script>
+    const SPACES = " ";
+
+    function random() {
+        let randomNum = Math.floor(Math.random() * 6) + 1;
+
+        if (randomNum === 1) {
+            document.getElementById('img').src = "DicePics/pic1.jpg";
+        } else if (randomNum === 2) {
+            document.getElementById('img').src = "DicePics/pic2.jpg";
+        } else if (randomNum === 3) {
+            document.getElementById('img').src = "DicePics/pic3.jpg";
+        } else if (randomNum === 4) {
+            document.getElementById('img').src = "DicePics/pic4.jpg";
+        } else if (randomNum === 5) {
+            document.getElementById('img').src = "DicePics/pic5.jpg";
+        } else {
+            document.getElementById('img').src = "DicePics/pic6.jpg";
+        }
+        console.log("Your number is" + SPACES + randomNum)
+        document.getElementById('dice').innerHTML = "Your number is" + SPACES + randomNum;
+    }
+
+    function doNotRoll() {
+        alert("Please Roll The Dice");
+    }
+
+</script>
+</body>
+</html>

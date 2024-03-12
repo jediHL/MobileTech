@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar fixed-bottom navbar-dark bg-dark">
+    <a href="home.html" class="navbar-brand"><i class="fas fa-home"></i></a>
+
+    <a href="tipsCalculator.html" class="navbar-brand"><i class="fas fa-donate"></i></a>
+
+    <a href="dice.html" class="navbar-brand"><i class="fas fa-dice"></i></a>
+
+    <a href="calculator.html" class="navbar-brand"><i class="fas fa-calculator"></i></a>
+
+</nav>
+<h1>Tip Calculator</h1>
+<label for="billAmount">Bill Amount:</label>
+<input type="number" id="billAmount">
+
+<label for="tipPercentage">Tip Percentage:</label>
+<select id="tipPercentage">
+    <option value="0.10">10%</option>
+    <option value="0.15">15%</option>
+    <option value="0.20">20%</option>
+</select>
+
+<button onclick="calculateTip()">Calculate Tip</button>
+
+<h2>Tip Amount:</h2>
+<input type="text" id="tipAmount" disabled>
+
+<script>
+    function calculateTip() {
+        // Get the bill amount and tip percentage
+        var billAmount = parseFloat(document.getElementById("billAmount").value);
+        var tipPercentage = parseFloat(document.getElementById("tipPercentage").value);
+        // Calculate the tip
+        var tipAmount = billAmount * tipPercentage;
+        var fullAmount = tipAmount + billAmount;
+        if (billAmount === 0) {
+            alert("Bill Amount can not be zero");
+            fullAmount = 0;
+        } else if (billAmount < 0) {
+            alert("Bill Amount can not be negative");
+            fullAmount = 0;
+        } else if (billAmount === null) {
+            alert("Bill Amount can not be null")
+            fullAmount = 0;
+        }
+
+        // Display the tip amount
+        document.getElementById("tipAmount").value = fullAmount.toFixed(2);
+    }
+</script>
+</body>
+</html>

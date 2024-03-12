@@ -1,0 +1,93 @@
+/* This is a class selector targeting an element with the class "calculator". It sets the styles for a calculator container */
+
+.calculator {
+
+    /* Sets purple background for elements with class .calculator */
+    background-color: #d34adc;
+
+    /* Sets the width of the calculator container to 250 pixels. */
+    width: 250px;
+
+    /* Centers the calculator container horizontally on the page with a top margin of 50 pixels */
+    margin: 50px auto;
+
+    /* Adds 10 pixels of padding inside the calculator container */
+    padding: 10px;
+
+    /* Adds a 1 pixel solid border around the calculator container with a color of light gray */
+    border: 1px solid #ccc;
+
+    /* Rounds the corners of the calculator container by 5 pixels */
+    border-radius: 5px;
+}
+
+/* This is an ID selector targeting an element with the ID "result". It sets the styles for the result display area. */
+#result {
+    /* Sets the width of the result display area to 100% of its container minus 20 pixels.
+    This allows the result display area to take up the remaining width after accounting for padding and margins */
+    width: calc(100% - 20px);
+
+    /*  Adds a bottom margin of 10 pixels to the result display area */
+    margin-bottom: 10px;
+    /* Adds 5 pixels of padding inside the result display area */
+    padding: 5px;
+
+    /*  Sets the font size of the text inside the result display area to 18 pixels */
+    font-size: 18px;
+}
+
+/* This is an ID selector targeting an element with the ID "previous-results".
+It sets the styles for an area where previous results may be displayed */
+
+#previous-results {
+    /* Adds a bottom margin of 10 pixels to the previous results area */
+    margin-bottom: 10px;
+}
+
+.buttons {
+    /* Specifies that the element should be displayed as a grid container */
+    display: grid;
+
+    /* Defines the number and size of the columns in the grid. 
+    In this case, it creates a grid with 4 columns, each taking up an equal portion of the available space */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* Specifies the size of the gap between grid items as 5 pixels */
+    grid-gap: 5px;
+}
+
+/* This is a type selector targeting <button> elements. It sets the styles for calculator buttons */
+button {
+    /* Adds 10 pixels of padding inside each button */
+    padding: 10px;
+
+    /* Sets the font size of the text inside each button to 18 pixels */
+    font-size: 18px;
+
+    /* Removes the border from each button */
+    border: none;
+
+    /* Rounds the corners of each button by 5 pixels */
+    border-radius: 5px;
+
+    /* Changes the cursor to a pointer when hovering over each button */
+    cursor: pointer;
+
+    /* Sets the background color of each button to pink */
+    background-color: #b2b2b2;
+}
+
+/* This is a pseudo-class selector targeting <button> elements when hovered over. It sets the styles for buttons when hovered over. */
+button:hover {
+    background-color: #c47070;
+}
+
+/* Sets gray background for entire webpage. */
+body {
+    background-color: #7d7979;
+}
+
+/* Sets white text color for elements with class .history */
+.history {
+    color: #ffffff;
+}
